@@ -1,0 +1,6 @@
+.vscode/**
+out/test/**
+src/**
+scripts/**
+tokens.*json
+**/*.map

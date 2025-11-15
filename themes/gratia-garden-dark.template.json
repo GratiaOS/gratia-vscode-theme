@@ -1,0 +1,143 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Gratia — Garden Dark",
+  "type": "dark",
+  "semanticHighlighting": true,
+  "colors": {
+    "editor.background": "${surface}",
+    "editor.foreground": "${ink}",
+    "editorCursor.foreground": "${caret}",
+
+    "editor.lineHighlightBackground": "${lineSoft}",
+    "editor.lineHighlightBorder": "${line}",
+
+    "editor.selectionBackground": "${selectionBg}",
+    "editor.selectionForeground": "${selectionFg}",
+    "editor.inactiveSelectionBackground": "${selectionMuted}",
+    "editor.selectionHighlightBackground": "${selectionMuted}",
+    "editor.wordHighlightBackground": "${selectionMuted}",
+    "editor.wordHighlightStrongBackground": "${selection}",
+
+    "editorBracketMatch.border": "${accentSoft}",
+
+    "editorLineNumber.foreground": "${gutterSoft}",
+    "editorGutter.addedBackground": "${accentSoft}",
+    "editorGutter.modifiedBackground": "${accentSoft}",
+    "editorGutter.deletedBackground": "${accentSoft}",
+
+    "editorGroupHeader.tabsBackground": "${surface}",
+    "editorGroupHeader.tabsBorder": "${surface}",
+    "tab.activeBackground": "${moodSurface}",
+    "tab.inactiveBackground": "${surface}",
+    "tab.border": "#00000000",
+    "tab.activeBorder": "${moodHalo}",
+    "tab.unfocusedActiveBorder": "${tabUnfocusedActiveBorder}",
+    "tab.activeForeground": "${tabActiveFg}",
+    "tab.inactiveForeground": "${tabInactiveFg}",
+
+    "activityBar.background": "${chrome}",
+    "activityBar.foreground": "${ink}",
+    "activityBarBadge.background": "${accent}",
+    "activityBarBadge.foreground": "${surface}",
+
+    "sideBar.background": "${chrome}",
+    "sideBar.foreground": "${ink}",
+    "sideBarSectionHeader.background": "${chromeSoft}",
+    "sideBarSectionHeader.foreground": "${ink}",
+
+    "statusBar.background": "${chrome}",
+    "statusBar.foreground": "${ink}",
+
+    "titleBar.activeBackground": "${chrome}",
+    "titleBar.activeForeground": "${ink}",
+
+    "panel.background": "${surface}",
+    "panel.border": "${line}",
+
+    "badge.background": "${chromeSoft}",
+    "badge.foreground": "${ink}",
+
+    "button.background": "${chromeSoft}",
+    "button.foreground": "${ink}",
+    "button.hoverBackground": "${line}",
+
+    "focusBorder": "${moodHalo}",
+
+    "input.background": "${inputBg}",
+    "input.foreground": "${ink}",
+    "input.border": "${moodHalo}",
+    "input.placeholderForeground": "${fieldPlaceholder}",
+    "inputOption.activeBorder": "${focusRing}",
+    "inputOption.activeBackground": "${fieldBgActive}",
+
+    "selection.background": "${selection}",
+    "list.activeSelectionBackground": "${selectionBg}",
+    "list.activeSelectionForeground": "${ink}",
+    "list.hoverBackground": "${fieldBgActive}",
+    "list.focusBackground": "${selectionBg}",
+    "list.focusForeground": "${ink}",
+    "list.inactiveSelectionBackground": "${fieldBg}",
+    "list.inactiveSelectionForeground": "${tabInactiveFg}",
+    "list.dropBackground": "${selectionMuted}",
+
+    "editorWidget.background": "${fieldBg}",
+    "editorWidget.border": "${fieldBorder}",
+    "quickInput.background": "${moodSurface}",
+    "quickInputTitle.background": "${moodSurface}",
+    "quickInputList.focusBackground": "${selectionBg}",
+    "quickInputList.focusForeground": "${ink}",
+    "dropdown.background": "${fieldBg}",
+
+    "peekView.border": "${fieldBorder}",
+    "peekViewEditor.background": "${moodSurface}",
+    "peekViewResult.background": "${surface}",
+    "peekViewTitle.background": "${moodSurface}",
+
+    "terminal.background": "${terminalBg}",
+    "terminal.foreground": "${terminalFg}",
+    "terminalCursor.background": "${terminalBg}",
+    "terminalCursor.foreground": "${terminalCursor}",
+
+    "terminal.ansiBlack": "${terminalAnsiBlack}",
+    "terminal.ansiRed": "${terminalAnsiRed}",
+    "terminal.ansiGreen": "${terminalAnsiGreen}",
+    "terminal.ansiYellow": "${terminalAnsiYellow}",
+    "terminal.ansiBlue": "${terminalAnsiBlue}",
+    "terminal.ansiMagenta": "${terminalAnsiMagenta}",
+    "terminal.ansiCyan": "${terminalAnsiCyan}",
+    "terminal.ansiWhite": "${terminalAnsiWhite}",
+    "terminal.ansiBrightBlack": "${terminalAnsiBrightBlack}",
+    "terminal.ansiBrightRed": "${terminalAnsiBrightRed}",
+    "terminal.ansiBrightGreen": "${terminalAnsiBrightGreen}",
+    "terminal.ansiBrightYellow": "${terminalAnsiBrightYellow}",
+    "terminal.ansiBrightBlue": "${terminalAnsiBrightBlue}",
+    "terminal.ansiBrightMagenta": "${terminalAnsiBrightMagenta}",
+    "terminal.ansiBrightCyan": "${terminalAnsiBrightCyan}",
+    "terminal.ansiBrightWhite": "${terminalAnsiBrightWhite}"
+  },
+    "tokenColors": [
+    { "scope": "comment", "settings": { "foreground": "#6B7D86", "fontStyle": "italic" } },
+    { "scope": ["string", "constant.other.symbol"], "settings": { "foreground": "#A7F3D0" } },
+    { "scope": ["keyword", "storage.type", "storage.modifier"], "settings": { "foreground": "#C084FC" } },
+    { "scope": ["entity.name.function", "support.function"], "settings": { "foreground": "#93C5FD" } },
+    { "scope": ["variable", "meta.definition.variable", "support.variable"], "settings": { "foreground": "#FBBF24" } },
+    { "scope": ["entity.name.type", "support.type", "storage.type.cs"], "settings": { "foreground": "#7DD3FC" } },
+    { "scope": ["punctuation", "meta.brace", "meta.delimiter"], "settings": { "foreground": "#C9D6DF" } },
+    { "scope": ["invalid", "invalid.deprecated"], "settings": { "foreground": "${surface}" } }
+  ],
+  "semanticTokenColors": {
+    "variable.readonly.defaultLibrary": "#FBBF24",
+    "property": "#EBD38C",
+    "parameter": "#EBD38C",
+    "function": "#93C5FD",
+    "method": "#93C5FD",
+    "class": "#7DD3FC",
+    "type": "#7DD3FC",
+    "enumMember": "#FBBF24",
+    "namespace": "#C084FC",
+    "string": "#A7F3D0",
+    "number": "#FCD34D",
+    "boolean": "#F78DBF",
+    "keyword": "#C084FC"
+  }
+}

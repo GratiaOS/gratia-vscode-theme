@@ -1,0 +1,12 @@
+{
+  "tone": {
+    "surface": "#0F1317",
+    "ink": "#E6EDF3",
+    "accent": "#60D394"
+  },
+  "authority": "#1A2B34",
+  "mood": {
+    "chrome": "#0B1014"
+  },
+  "glow": "#60D394"
+}
