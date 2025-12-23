@@ -10,6 +10,10 @@ const TOKENS_EXAMPLE = path.join(ROOT, 'tokens.example.json');
 
 const args = process.argv.slice(2);
 const WATCH = args.includes('--watch');
+const SKIN_RAW = process.env.GARDEN_SKIN;
+const SKIN = SKIN_RAW && SKIN_RAW.toLowerCase() !== 'none' ? SKIN_RAW.toUpperCase() : null;
+const SKIN_TO_USE =
+  SKIN_RAW && SKIN_RAW.toLowerCase() === 'none' ? null : SKIN ?? 'MOON';
 
 const CANDIDATES = [
   process.env.GARDEN_TOKENS,
@@ -122,6 +126,21 @@ const normalizeHex = (value) => {
   return `#${hex.toUpperCase()}`;
 };
 
+const parseSkinTone = (cssText, skin) => {
+  const block = extractBlock(cssText, `:root[data-skin-id='${skin}']`);
+  if (!block) return null;
+  const tone = {};
+  const colorRegex = /--color-(surface|text|accent)\s*:\s*([^;]+);/gi;
+  let colorMatch;
+  while ((colorMatch = colorRegex.exec(block))) {
+    const value = colorToHex(colorMatch[2]);
+    if (!value) continue;
+    const key = colorMatch[1] === 'text' ? 'ink' : colorMatch[1];
+    tone[key] = value;
+  }
+  return tone;
+};
+
 const parseCssTone = (cssText) => {
   const tone = {};
   const toneRegex = /--tone-(surface|ink|accent)\s*:\s*([^;]+);/gi;
@@ -142,6 +161,13 @@ const parseCssTone = (cssText) => {
       if (!value) continue;
       const key = colorMatch[1] === 'text' ? 'ink' : colorMatch[1];
       tone[key] = value;
+    }
+  }
+
+  if (SKIN_TO_USE) {
+    const skinTone = parseSkinTone(cssText, SKIN_TO_USE);
+    if (skinTone) {
+      Object.assign(tone, skinTone);
     }
   }
 

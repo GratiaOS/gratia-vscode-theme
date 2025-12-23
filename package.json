@@ -80,6 +80,7 @@
     "watch": "node scripts/watch-all.mjs"
   },
   "devDependencies": {
+    "@gratiaos/tokens": "^1.0.7",
     "@types/node": "^20.12.12",
     "@types/vscode": "^1.86.0",
     "typescript": "^5.6.3",
