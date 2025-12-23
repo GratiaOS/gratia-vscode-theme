@@ -3,7 +3,7 @@
   "displayName": "Gratia — Garden Core (Dark)",
   "description": "Authority-tinted selection, mood-toned chrome, and a soft glow caret that mirrors Garden tokens.",
   "icon": "mark/gratia-mark.png",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "publisher": "gratiaos",
   "repository": {
     "type": "git",
